@@ -5,10 +5,11 @@
     font-family: 'Comfortaa', cursive;
 
 }
- 
 
 
-h1, h2{
+
+h1,
+h2 {
     padding-left: 1rem;
     font-family: 'Rochester', cursive;
     font-family: 'Satisfy', cursive;
@@ -17,7 +18,7 @@ h1, h2{
 /* 
 HEADER */
 
-.div-header{
+.div-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +27,7 @@ HEADER */
     padding: 0.3rem;
 }
 
-.ul-header{
+.ul-header {
     margin-right: 2rem;
 }
 
@@ -36,7 +37,7 @@ ul li {
 
 }
 
-.logo{
+.logo {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
@@ -51,13 +52,13 @@ li a {
     margin: 0 5px;
     text-decoration: none;
     color: white;
-  }
+}
 
 ul li a:hover {
     color: yellow;
 }
 
-.logo-completo img{
+.logo-completo img {
     width: 100%;
     height: 100%;
 }
@@ -66,7 +67,7 @@ ul li a:hover {
 /* BODY */
 
 
-.div-container-house{
+.div-container-house {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,14 +79,14 @@ ul li a:hover {
     height: 49rem;
 }
 
-.section-nosindex{
+.section-nosindex {
     font-size: 40px;
     height: 4rem;
     text-align: center;
     align-content: center;
 }
 
-.div-container-textimg-index{
+.div-container-textimg-index {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -94,7 +95,7 @@ ul li a:hover {
 }
 
 
-.div-container-nosindex{
+.div-container-nosindex {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -102,22 +103,22 @@ ul li a:hover {
     margin-bottom: 3rem;
 }
 
-.div-container-text-index{
+.div-container-text-index {
     width: 65%;
     padding-right: 3%;
 }
 
-.div-container-img-index{
+.div-container-img-index {
     width: 35%;
 }
 
-.img-info{
+.img-info {
     width: 100%;
     height: 100%;
     border-radius: 1%;
 }
 
-.div-buttons{
+.div-buttons {
     display: flex;
     justify-content: end;
     align-items: end;
@@ -154,7 +155,9 @@ ul li a:hover {
     font-size: 1.2rem;
 }
 
-.div-direction-container, .div-url, .div-social-media {
+.div-direction-container,
+.div-url,
+.div-social-media {
     flex: 1;
     padding: 0 20px;
 }
@@ -201,38 +204,38 @@ ul li a:hover {
     padding: 1rem;
 }
 
-.div-nosotros-container section{
+.div-nosotros-container section {
     margin-top: 2rem;
 }
 
-.div-info-extra-container{
+.div-info-extra-container {
     display: flex;
     align-content: center;
     justify-content: space-between;
     text-align: left;
     width: 90%;
-    
+
 }
 
-.div-info-extra-container-map{
+.div-info-extra-container-map {
     display: flex;
     align-content: center;
     text-align: left;
 
     width: 90%;
-    
+
 }
 
-.div-mini-container{
+.div-mini-container {
     width: 46%;
     display: flex;
 }
 
-.div-info-extra-container-map section{
+.div-info-extra-container-map section {
     padding: 20px;
 }
 
-.div-info-extra-container-map section h3{
+.div-info-extra-container-map section h3 {
     margin-bottom: 1rem;
 }
 
@@ -240,14 +243,14 @@ ul li a:hover {
 /* -------- Vista Proyecto ----------*/
 
 
-.div-container-proyecto{
+.div-container-proyecto {
     display: flex;
     align-content: center;
     justify-content: center;
     margin-top: 3rem;
 }
 
-.div-container-proyecto-sub{
+.div-container-proyecto-sub {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -255,20 +258,20 @@ ul li a:hover {
     width: 80%;
 }
 
-.div-container-img-proyecto{
+.div-container-img-proyecto {
     width: 55%;
     height: 95%;
 }
 
-.div-container-text-proyecto{
+.div-container-text-proyecto {
     width: 65%;
 }
 
-.section-text-proyecto{
+.section-text-proyecto {
     padding: 3%;
 }
 
-.div-container-proyecto-map{
+.div-container-proyecto-map {
     display: flex;
     justify-content: center;
 }
@@ -276,14 +279,14 @@ ul li a:hover {
 .section-title-proyecto {
     font-size: 40px;
     text-align: center;
-    }
+}
 
 
-.div-container-iframe-map{
+.div-container-iframe-map {
     width: 90%;
     padding: 2rem;
     margin-left: 3rem;
-}   
+}
 
 
 /* --- lista proyectos ----*/
@@ -295,34 +298,34 @@ ul li a:hover {
     padding: 1rem;
 }
 
-.div-nosotros-container section{
+.div-nosotros-container section {
     margin-top: 2rem;
 }
 
-.div-info-extra-container{
+.div-info-extra-container {
     display: flex;
     align-content: center;
     justify-content: space-between;
     text-align: left;
     width: 90%;
-    
+
 }
 
-.div-info-extra-container-map{
+.div-info-extra-container-map {
     display: flex;
     align-content: center;
     justify-content: space-around;
     text-align: left;
     width: 90%;
-    
+
 }
 
-.div-mini-container{
+.div-mini-container {
     width: 46%;
     display: flex;
 }
 
-.div-container-table-listaproyecto{
+.div-container-table-listaproyecto {
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
@@ -330,39 +333,42 @@ ul li a:hover {
     justify-content: center;
 }
 
-.div-container-filter-select{
+.div-container-filter-select {
     width: 85%;
 }
 
-.section-filter-main{
+.section-filter-main {
     text-align: center;
     height: 2rem;
     display: inline-flex;
     margin: 1rem;
 }
-.select-filter1{
-    margin-left: 5rem;
-    width: 15rem;
-}
-.select-filter2{
-    margin-left: 5rem;
-    width: 15rem;
-}
-.search-filter{
+
+.select-filter1 {
     margin-left: 5rem;
     width: 15rem;
 }
 
-.fa-search{
+.select-filter2 {
+    margin-left: 5rem;
+    width: 15rem;
+}
+
+.search-filter {
+    margin-left: 5rem;
+    width: 15rem;
+}
+
+.fa-search {
     width: 3rem;
 }
 
-.boton-filtrar-listaproyecto{
+.boton-filtrar-listaproyecto {
     width: 8rem;
     height: 2rem;
 }
 
-.div-boton-filtrar-listaproyecto{
+.div-boton-filtrar-listaproyecto {
     margin-left: 5rem;
 }
 
@@ -372,23 +378,62 @@ ul li a:hover {
 
 
 
-.div-form{
+.div-form {
     margin-top: 3rem;
     border: solid 1px;
     padding: 1rem;
-    
+
 }
 
 
-.div-form textarea{
+.div-form textarea {
     resize: none;
-    
+
 }
 
-.div-form-container{
+.div-form-container {
     width: 50%;
 }
 
-.div-boton-filtrar-listaproyecto-contact{
+.div-boton-filtrar-listaproyecto-contact {
     padding-left: 80%;
+}
+
+
+/* /Circle imagen/ */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.circle-img img {
+    transition: transform 0.3s;
+}
+
+.circle-img:hover img {
+    transform: scale(1.2);
+}
+
+
+.card-project {
+    transition: transform 0.3s;
+}
+
+.card-project:hover{
+    transform: scale(1.1);
+}
+
+
+.btn {
+    transition: transform 0.3s;
+}
+
+.btn:hover{
+    transform: scale(1.2);
 }
