@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comfortaa', cursive;
-
+  font-family: "Comfortaa", cursive;
 }
 
 html {
@@ -25,13 +24,11 @@ p {
 h1,
 h2 {
   padding-left: 1rem;
-  font-family: 'Rochester', cursive;
-  font-family: 'Satisfy', cursive;
+  font-family: "Rochester", cursive;
+  font-family: "Satisfy", cursive;
 }
 
-/* 
-HEADER */
-
+/* HEADER */
 .div-header {
   display: flex;
   align-items: center;
@@ -48,7 +45,6 @@ HEADER */
 ul li {
   display: inline-block;
   list-style: none;
-
 }
 
 .logo {
@@ -77,10 +73,7 @@ ul li a:hover {
   height: 100%;
 }
 
-
 /* BODY */
-
-
 .div-container-house {
   display: flex;
   justify-content: center;
@@ -108,7 +101,6 @@ ul li a:hover {
   width: 80%;
 }
 
-
 .div-container-nosindex {
   display: flex;
   align-content: center;
@@ -134,8 +126,8 @@ ul li a:hover {
 
 .div-buttons {
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .boton-esquina {
@@ -163,7 +155,7 @@ ul li a:hover {
 }
 
 #a-link-header {
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   color: rgb(0, 0, 0);
   font-size: 2.15rem;
   text-transform: uppercase;
@@ -206,7 +198,6 @@ ul li a:hover {
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-  /** color: #ffc800;*/
   color: #eea333;
 }
 
@@ -218,47 +209,34 @@ ul li a:hover {
     background-color: rgb(252, 252, 252);
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
-
   #mainNav .navbar-brand {
     font-size: 1.5em;
     transition: font-size 0.3s ease-in-out;
   }
-
   #mainNav .navbar-brand img {
     height: 4rem;
     border-radius: 50%;
     transition: height 0.3s ease-in-out;
   }
-
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #212529;
   }
-
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
-
   #mainNav.navbar-shrink .navbar-brand svg,
   #mainNav.navbar-shrink .navbar-brand img {
     height: 1.5rem;
   }
-
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
   }
-
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
 }
-
-
-
-
-
-
 /* FOOTER */
 .contenido {
   padding: 20px;
@@ -311,13 +289,7 @@ ul li a:hover {
   height: 20px;
 }
 
-
-
-
-
-
 /* NOSOTROS */
-
 .div-nosotros-container {
   display: flex;
   border: solid 2px;
@@ -335,16 +307,13 @@ ul li a:hover {
   justify-content: space-between;
   text-align: left;
   width: 90%;
-
 }
 
 .div-info-extra-container-map {
   display: flex;
   align-content: center;
   text-align: left;
-
   width: 90%;
-
 }
 
 .div-mini-container {
@@ -360,10 +329,7 @@ ul li a:hover {
   margin-bottom: 1rem;
 }
 
-
 /* -------- Vista Proyecto ----------*/
-
-
 .div-container-proyecto {
   display: flex;
   align-content: center;
@@ -402,50 +368,13 @@ ul li a:hover {
   text-align: center;
 }
 
-
 .div-container-iframe-map {
   width: 90%;
   padding: 2rem;
   margin-left: 3rem;
 }
 
-
 /* --- lista proyectos ----*/
-
-.div-nosotros-container {
-  display: flex;
-  border: solid 2px;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.div-nosotros-container section {
-  margin-top: 2rem;
-}
-
-.div-info-extra-container {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  text-align: left;
-  width: 90%;
-
-}
-
-.div-info-extra-container-map {
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  text-align: left;
-  width: 90%;
-
-}
-
-.div-mini-container {
-  width: 46%;
-  display: flex;
-}
-
 .div-container-table-listaproyecto {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -493,23 +422,15 @@ ul li a:hover {
   margin-left: 5rem;
 }
 
-
-
 /* CONTACTO */
-
-
-
 .div-form {
   margin-top: 3rem;
   border: solid 1px;
   padding: 1rem;
-
 }
-
 
 .div-form textarea {
   resize: none;
-
 }
 
 .div-form-container {
@@ -520,19 +441,15 @@ ul li a:hover {
   padding-left: 80%;
 }
 
-
-/* /Circle imagen/ */
-
+/* Circle imagen */
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(180deg);
   }
 }
-
 .circle-img img {
   transition: transform 0.3s;
 }
@@ -540,7 +457,6 @@ ul li a:hover {
 .circle-img:hover img {
   transform: scale(1.2);
 }
-
 
 .card-project {
   transition: transform 0.3s;
@@ -550,7 +466,6 @@ ul li a:hover {
   transform: scale(1.1);
 }
 
-
 .btn {
   transition: transform 0.3s;
 }
@@ -559,19 +474,18 @@ ul li a:hover {
   transform: scale(1.2);
 }
 
-
-
 .img-brand {
   height: 2.75rem;
 }
 
-/** about index **/
-
+/* about index */
 .page-section {
   padding: 8rem 0;
 }
 
 #about {
   --bs-bg-opacity: 1;
-  background-image: url('/imagenes/img-casa-index-2.jpg');
+  background-image: url("/imagenes/img-casa-index-2.jpg");
 }
+
+/*# sourceMappingURL=estilo-final.css.map */
