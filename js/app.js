@@ -21,31 +21,29 @@ function preEntregaParteUnoNumeros() {
   let sum = 0;
   let conMasC = 0;
   let conMenosC = 0;
-  let sigue = true;
 
-  while (sigue) {
-    for (i = 0; i < 5; i++) {
-      let tmp = parseInt(prompt("Ingrese un numero entre 1 y 100"));
+for (i = 0; i < 5; i++) {
+    let userInput = prompt("Ingrese un numero entre 1 y 100");
+    let tmp = parseInt(userInput);
 
-      if (!(userInput === null)) {
-        if ((tmp > 1) & (tmp < 100)) {
-          if (tmp > 50) {
+    if ((tmp > 1) & (tmp < 100)) {
+        if (tmp > 50) {
             conMasC++;
-          } else {
-            conMenosC++;
-          }
-          sum = sum + tmp;
         } else {
-          alert("Numero no aceptado");
-          i--;
+            conMenosC++;
         }
-      } else {
-        sigue = false;
-      }
+        sum = sum + tmp;
+    } else if (userInput === null) {
+        break;
+    } else {
+        alert("Numero no aceptado");
+        i--;
     }
+}
+    
 
-    alert("La suma total de los numeros es: " + sum);
-    alert("La cantidad de numeros mayores a 50 es: " + conMasC);
-    alert("La cantidad de numeros menores a 50 es: " + conMenosC);
-  }
+alert("La suma total de los numeros es : " + sum);
+alert("La cantidad de numeros mayores a 50 es : " + conMasC);
+alert("La cantidad de numeros menores a 50 es : " + conMenosC);
+  
 }
