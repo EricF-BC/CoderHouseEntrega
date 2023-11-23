@@ -3,47 +3,54 @@ function preEntregaParteUno() {
   let camposForm = document.forms["formularioContacto"].elements;
   for (let i = 0; i < camposForm.length; i++) {
     let campo = camposForm[i];
-    if (campo.type !== "submit") {
+    if (campo.type !== "button") {
       let nombreCampo = campo.id.slice(0, -8);
-      if (campo.value.trim() === "") {
+      if (campo.id === "contraseña"){
+          if (campo.value.trim() === "") {
+            alert("Ingrese contraseña porfavor");
+        } 
+      }if (campo.id === "confirmacion_contraseña"){
+          if (campo.value.trim() === "") {
+            alert("Confirme contraseña porfavor");
+          }
+      } else if (campo.value.trim() === "") {
         alert("Ingrese el campo " + nombreCampo + " porfavor");
       }
     }
   }
 
-  let numeroTelefono = document.getElementById("celularcontacto").value;
-  if (numeroTelefono.length <= 11) {
+  let numeroTelefono = document.getElementById("telefonocontacto").value;
+  if (numeroTelefono.length < 11) {
     alert("El numero de telefono ingresado es muy corto");
   }
+
+  let contraseña = document.getElementById("contraseña").value;
+  let conContraseña = document.getElementById("confirmacion_contraseña").value;
+  if ((contraseña !== "") & (conContraseña !== "")){
+      if (contraseña === conContraseña) {
+        Swal.fire({
+          icon: "success",
+          title: "Guardado sin problemas",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        window.location.href = '/index.html';
+      } else {
+        alert("Las contraseñas No son iguales :C, intente de nuevo");
+        document.getElementById('password').value = '';
+        document.getElementById('confirmPassword').value = '';
+      }
+  }
+
 }
 
-function preEntregaParteUnoNumeros() {
-  let sum = 0;
-  let conMasC = 0;
-  let conMenosC = 0;
+function funcionCarritoAlfa() {
+  let intento1 = document.getElementById("hola");
+  if (intento1 == null){
+    alert(intento1.innerHTML)
+  } else {
+    alert(intento1.innerHTML)
+  }
 
-for (i = 0; i < 5; i++) {
-    let userInput = prompt("Ingrese un numero entre 1 y 100");
-    let tmp = parseInt(userInput);
-
-    if ((tmp > 1) & (tmp < 100)) {
-        if (tmp > 50) {
-            conMasC++;
-        } else {
-            conMenosC++;
-        }
-        sum = sum + tmp;
-    } else if (userInput === null) {
-        break;
-    } else {
-        alert("Numero no aceptado");
-        i--;
-    }
-}
-    
-
-alert("La suma total de los numeros es : " + sum);
-alert("La cantidad de numeros mayores a 50 es : " + conMasC);
-alert("La cantidad de numeros menores a 50 es : " + conMenosC);
   
 }

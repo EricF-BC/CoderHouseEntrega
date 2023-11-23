@@ -47,7 +47,7 @@
             <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="listaproyecto.html">Proyectos</a></li>
             <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacto.html">Contactanos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Registrate</a></li>
           </ul>
         </div>
       </div>
@@ -95,7 +95,6 @@
       </div>
     </div>
 
-
     <div class="album py-5 bg-light ">
       <div class="container">
         <section>
@@ -104,14 +103,14 @@
               <div class="card shadow-sm card-project">
                 <img class="img-info" src="/imagenes/img-casa-index.jpg" alt="">
                 <div class="card-body">
-                  <p class="card-text"> Este lujoso departamento en el centro de la ciudad combina la comodidad 
+                  <p class="card-text" id="hola"> Este lujoso departamento en el centro de la ciudad combina la comodidad 
                     moderna con vistas impresionantes. Con 3 amplias habitaciones y 2 baños, disfrutarás de la vida
                     urbana en su máxima expresión. La cocina cuenta con electrodomésticos de última generación y
                     una isla de granito, ideal para los amantes de la gastronomía. Además, el edificio ofrece servicios 
                     exclusivos como una piscina en la azotea, un gimnasio y estacionamiento subterráneo.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href="proyecto/proyecto.html" type="button" class="btn btn-sm btn-outline-secondary">Ver</a>
+                      <button type="button" class="btn btn-primary" onclick="funcionCarritoAlfa()" id="abrirCarrito">Abrir Carrito</button>
                     </div>
                     <small class="text-muted">9 mins</small>
                   </div>
@@ -249,6 +248,7 @@
     </div>
   </div>
   <script src="/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 <footer class="footer">
   <div class="div-direction-container">
@@ -262,7 +262,7 @@
       <li><a href="/index.html">Inicio</a></li>
       <li><a href="listaproyecto.html">Proyectos</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="contacto.html">Registro</a></li>
     </ul>
   </div>
   <div class="div-social-media">
