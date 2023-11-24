@@ -45,7 +45,7 @@ function preEntregaParteUno() {
 }
 
 
-let listarray = [
+let listaArray = [
   {
     id: 1,
     nombre: "Besties - Alimento Perros Adultos Todas las Razas",
@@ -132,8 +132,8 @@ let listarray = [
 
 function agregarAlCarro(pos) {
   numero = document.getElementById("canti_compra").value;
-  if (numero <= listarray[pos].cantidad){
-    alert("La cantidad total de la compra de "+ numero + " es de: "+ numero * listarray[pos].precio)
+  if (numero <= listaArray[pos].cantidad){
+    alert("La cantidad total de la compra de "+ numero + " es de: "+ numero * listaArray[pos].precio)
   } else{
     alert("Monto supera las unidades disponibles")
   }
@@ -166,23 +166,23 @@ function generarHTML(pos) {
       <!-- Producto ${pos + 1} -->
       <div class="col">
         <div class="card shadow-sm card-project">
-              <img src="${listarray[pos].imagen}" class="card-img-top" alt="Producto ${pos + 1}" />
+              <img src="${listaArray[pos].imagen}" class="card-img-top" alt="Producto ${pos + 1}" />
               <div class="card-body">
-                  <h5 class="card-title">${listarray[pos].nombre}</h5>
-                  <p class="card-text">${listarray[pos].descripcion}</p>
-                  <h5 class="card-subtitle mb-2"> Precio: $${listarray[
+                  <h5 class="card-title">${listaArray[pos].nombre}</h5>
+                  <p class="card-text">${listaArray[pos].descripcion}</p>
+                  <h5 class="card-subtitle mb-2"> Precio: $${listaArray[
                     pos
                   ].precio}</h5>
                   <div class="rating">
-                  ${generarEstrellas(listarray[pos].valoracion)}
-                  <span class="valoracion-numero">${listarray[pos].valoracion}</span>
+                  ${generarEstrellas(listaArray[pos].valoracion)}
+                  <span class="valoracion-numero">${listaArray[pos].valoracion}</span>
                   </div>
                   <div class="row row-cols-1 row-cols-md-10 g-3 ">
                   <div class="btn-group d-flex justify-content-center">
                   <button class="button-69" onclick="agregarAlCarro(${pos})">Agregar Producto</button>
                   <input type="number" class="form-control-lista" aria-describedby="button-addon1" placeholder="1" id="canti_compra">
                   </div>
-                  <small>${listarray[pos].cantidad} Unidades disponibles</small>
+                  <small>${listaArray[pos].cantidad} Unidades disponibles</small>
                 </div>
     
               </div>
