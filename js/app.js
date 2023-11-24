@@ -131,9 +131,9 @@ let listaArray = [
 ];
 
 function agregarAlCarro(pos) {
-  numero = document.getElementById("canti_compra").value;
+  numero = document.getElementById("canti_compra_" + pos).value;
   if (numero <= listaArray[pos].cantidad){
-    alert("La cantidad total de la compra de "+ numero + " es de: "+ numero * listaArray[pos].precio)
+    alert("La cantidad total de la compra de " + numero + " es de : " + numero * listaArray[pos].precio)
   } else{
     alert("Monto supera las unidades disponibles")
   }
@@ -180,7 +180,7 @@ function generarHTML(pos) {
                   <div class="row row-cols-1 row-cols-md-10 g-3 ">
                   <div class="btn-group d-flex justify-content-center">
                   <button class="button-69" onclick="agregarAlCarro(${pos})">Agregar Producto</button>
-                  <input type="number" class="form-control-lista" aria-describedby="button-addon1" placeholder="1" id="canti_compra">
+                  <input type="number" class="form-control-lista" aria-describedby="button-addon1" placeholder="1" id="canti_compra_${pos}">
                   </div>
                   <small>${listaArray[pos].cantidad} Unidades disponibles</small>
                 </div>
