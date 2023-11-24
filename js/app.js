@@ -28,13 +28,8 @@ function preEntregaParteUno() {
   let conContraseña = document.getElementById("confirmacion_contraseña").value;
   if ((contraseña !== "") & (conContraseña !== "")){
       if (contraseña === conContraseña) {
-        Swal.fire({
-          icon: "success",
-          title: "Guardado sin problemas",
-          showConfirmButton: false,
-          timer: 1500
-        });
-        window.location.href = '/index.html';
+        alert("Las contraseñas son iguales, enviando a la tienda");
+        window.location.href = 'listaproyecto.html';
       } else {
         alert("Las contraseñas No son iguales :C, intente de nuevo");
         document.getElementById('password').value = '';
