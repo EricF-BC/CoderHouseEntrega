@@ -1,6 +1,6 @@
 let listaArray;
 
-function preEntregaParteUno() {
+function registroYStorage() {
   // Validador de campos
   let camposForm = document.forms["formularioContacto"].elements;
   for (let i = 0; i < camposForm.length; i++) {
@@ -39,9 +39,35 @@ function preEntregaParteUno() {
       }
   }
 
+  //Guardar en el local Storage
+
+  let nombreS = document.getElementById('nombrecontacto').value;
+  let apellidoS = document.getElementById('apellidocontacto').value;
+  let telefonoS = document.getElementById('telefonocontacto').value;
+  let emailS = document.getElementById('emailcontacto').value;
+
+  localStorage.setItem('nombre', nombreS);
+  localStorage.setItem('apellido', apellidoS);
+  localStorage.setItem('telefono', telefonoS);
+  localStorage.setItem('email', emailS);
+
 }
 
-function agregarAlCarro(pos) {
+
+// Función para cargar los datos desde el localStorage
+function cargarDatos() {
+  // Verificamos si ya hay datos guardados en el localStorage
+  if(localStorage.getItem('nombre')) {
+      document.getElementById('nombrecontacto').value = localStorage.getItem('nombre');
+      document.getElementById('apellidocontacto').value = localStorage.getItem('apellido');
+      document.getElementById('telefonocontacto').value = localStorage.getItem('telefono');
+      document.getElementById('emailcontacto').value = localStorage.getItem('email');
+      document.getElementById('contraseña').value = localStorage.getItem('contraseña');
+      document.getElementById('confirmacion_contraseña').value = localStorage.getItem('confirmacion_contraseña');
+  }
+}
+
+const agregarAlCarro = (pos) => {
   numero = document.getElementById("canti_compra_" + pos).value;
   if (numero <= listaArray[pos].cantidad){
     Swal.fire({
@@ -84,17 +110,17 @@ function generarEstrellas(valoracion) {
   return stars || "Sin valoración"; 
 }
 
-function cargarJsonHtml(){
-  const url = "/Json/data.json"
-  fetch(url)
-  .then(response => response.json()) 
-  .then(data => {
-    listaArray =  data
+async function cargarJsonHtml() {
+  try {
+    const url = "/Json/data.json";
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    listaArray = data;
     generateBaseHTML(listaArray);
-  })
-  .catch(error => {
+  } catch (error) {
     console.error("Error al cargar el archivo JSON:", error);
-  });
+  }
 }
 
 function generateBaseHTML(listaArray){
