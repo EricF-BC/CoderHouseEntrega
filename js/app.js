@@ -3,6 +3,7 @@ let listaArray;
 function registroYStorage() {
   // Validador de campos
   let camposForm = document.forms["formularioContacto"].elements;
+  let flag = true;
   for (let i = 0; i < camposForm.length; i++) {
     let campo = camposForm[i];
     if (campo.type !== "button") {
@@ -10,13 +11,16 @@ function registroYStorage() {
       if (campo.id === "contraseña"){
           if (campo.value.trim() === "") {
             alert("Ingrese contraseña porfavor");
+            flag = false;
         } 
       }if (campo.id === "confirmacion_contraseña"){
           if (campo.value.trim() === "") {
             alert("Confirme contraseña porfavor");
+            flag = false;
           }
       } else if (campo.value.trim() === "") {
         alert("Ingrese el campo " + nombreCampo + " porfavor");
+        flag = false;
       }
     }
   }
@@ -24,32 +28,42 @@ function registroYStorage() {
   let numeroTelefono = document.getElementById("telefonocontacto").value;
   if (numeroTelefono.length < 11) {
     alert("El numero de telefono ingresado es muy corto");
+    flag = false;
   }
 
   let contraseña = document.getElementById("contraseña").value;
   let conContraseña = document.getElementById("confirmacion_contraseña").value;
   if ((contraseña !== "") & (conContraseña !== "")){
       if (contraseña === conContraseña) {
-        alert("Las contraseñas son iguales, enviando a la tienda");
-        window.location.href = 'listaproyecto.html';
+        alert("Las contraseñas son iguales, Pruebe en recargar y cargar datos");
       } else {
         alert("Las contraseñas No son iguales :C, intente de nuevo");
         document.getElementById('password').value = '';
         document.getElementById('confirmPassword').value = '';
+        flag = false;
       }
   }
 
-  //Guardar en el local Storage
+    //Guardar en el local Storage
+  if (flag == true) {
+    let nombreS = document.getElementById('nombrecontacto').value;
+    let apellidoS = document.getElementById('apellidocontacto').value;
+    let telefonoS = document.getElementById('telefonocontacto').value;
+    let emailS = document.getElementById('emailcontacto').value;
 
-  let nombreS = document.getElementById('nombrecontacto').value;
-  let apellidoS = document.getElementById('apellidocontacto').value;
-  let telefonoS = document.getElementById('telefonocontacto').value;
-  let emailS = document.getElementById('emailcontacto').value;
+    localStorage.setItem('nombre', nombreS);
+    localStorage.setItem('apellido', apellidoS);
+    localStorage.setItem('telefono', telefonoS);
+    localStorage.setItem('email', emailS);
+    localStorage.setItem('flag', flag)
 
-  localStorage.setItem('nombre', nombreS);
-  localStorage.setItem('apellido', apellidoS);
-  localStorage.setItem('telefono', telefonoS);
-  localStorage.setItem('email', emailS);
+    document.getElementById('nombrecontacto').value == '';
+    document.getElementById('apellidocontacto').value = '';
+    document.getElementById('telefonocontacto').value = '';
+    document.getElementById('emailcontacto').value = '';
+    document.getElementById('password').value = '';
+    document.getElementById('confirmPassword').value = '';
+  }
 
 }
 
@@ -57,7 +71,7 @@ function registroYStorage() {
 // Función para cargar los datos desde el localStorage
 function cargarDatos() {
   // Verificamos si ya hay datos guardados en el localStorage
-  if(localStorage.getItem('nombre')) {
+  if(localStorage.getItem('flag') == true) {
       document.getElementById('nombrecontacto').value = localStorage.getItem('nombre');
       document.getElementById('apellidocontacto').value = localStorage.getItem('apellido');
       document.getElementById('telefonocontacto').value = localStorage.getItem('telefono');
