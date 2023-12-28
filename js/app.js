@@ -26,14 +26,12 @@ function registroYStorage() {
   }
 
   let numeroTelefono = document.getElementById("telefonocontacto").value;
-  if (numeroTelefono.length < 11) {
-    alert("El numero de telefono ingresado es muy corto");
-    flag = false;
-  }
+  // IF ternario para numero de telefono y flag
+  flag = numeroTelefono.length < 11 ? (alert("El numero de telefono ingresado es muy corto"), false) : true;
 
   let contraseña = document.getElementById("contraseña").value;
   let conContraseña = document.getElementById("confirmacion_contraseña").value;
-  if ((contraseña !== "") & (conContraseña !== "")){
+  if ((contraseña !== "") & (conContraseña !== "") && (flag == true)){
       if (contraseña === conContraseña) {
         alert("Las contraseñas son iguales, Pruebe en recargar y cargar datos");
       } else {
@@ -57,7 +55,7 @@ function registroYStorage() {
     localStorage.setItem('email', emailS);
     localStorage.setItem('flag', flag)
 
-    document.getElementById('nombrecontacto').value == '';
+    document.getElementById('nombrecontacto').value = '';
     document.getElementById('apellidocontacto').value = '';
     document.getElementById('telefonocontacto').value = '';
     document.getElementById('emailcontacto').value = '';
@@ -67,11 +65,9 @@ function registroYStorage() {
 
 }
 
-
-// Función para cargar los datos desde el localStorage
+// Cargar en localStorage
 function cargarDatos() {
-  // Verificamos si ya hay datos guardados en el localStorage
-  if(localStorage.getItem('flag') == true) {
+  if(localStorage.getItem('flag')) {
       document.getElementById('nombrecontacto').value = localStorage.getItem('nombre');
       document.getElementById('apellidocontacto').value = localStorage.getItem('apellido');
       document.getElementById('telefonocontacto').value = localStorage.getItem('telefono');
@@ -79,6 +75,23 @@ function cargarDatos() {
       document.getElementById('contraseña').value = localStorage.getItem('contraseña');
       document.getElementById('confirmacion_contraseña').value = localStorage.getItem('confirmacion_contraseña');
   }
+}
+
+// Limpiar datitos
+function limpiarDatos() {
+  localStorage.clear();
+  document.getElementById('nombrecontacto').value = '';
+  document.getElementById('apellidocontacto').value = '';
+  document.getElementById('telefonocontacto').value = '';
+  document.getElementById('emailcontacto').value = '';
+  document.getElementById('password').value = '';
+  document.getElementById('confirmPassword').value = '';
+}
+
+// Relleno
+function eliminarDatoCorreo() {
+  localStorage.removeItem('email');
+  document.getElementById('emailcontacto').value = '';
 }
 
 const agregarAlCarro = (pos) => {
